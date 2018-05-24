@@ -22,6 +22,9 @@ class SubmissionForm extends Component {
 
   handleSubmit(e) {
     this.props.onSubmit({company: this.state.company, answer: this.state.answer});
+
+    // Clear items
+    this.setState({company: '', answer: ''})
   }
 
   render () {

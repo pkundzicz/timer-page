@@ -10,7 +10,7 @@ const reorder = (list, startIndex, endIndex) => {
   return result;
 };
 
-const grid = 8;
+const grid = 4;
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
@@ -38,6 +38,8 @@ class VertList extends Component {
       items: props.items,
     };
     this.onDragEnd = this.onDragEnd.bind(this);
+
+    console.log(this.state);
   }
 
   onDragEnd(result) {
@@ -69,7 +71,7 @@ class VertList extends Component {
               style={getListStyle(snapshot.isDraggingOver)}
             >
               {this.state.items.map((item, index) => (
-                <Draggable key={item.id} draggableId={item.id} index={index}>
+                <Draggable key={item.company} draggableId={item.company} index={index}>
                   {(provided, snapshot) => (
                     <div
                       ref={provided.innerRef}
@@ -80,7 +82,7 @@ class VertList extends Component {
                         provided.draggableProps.style
                       )}
                     >
-                      {item.content}
+                      {(index + 1) + ". " + item.answer + " - " + item.company}
                     </div>
                   )}
                 </Draggable>

@@ -1,11 +1,13 @@
 body {
   font-family: 'Montserrat', Helvetica, sans-serif;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   height: 100vh;
+  background-color: #fffdd0;
 }
+
 p {
   max-width: 560px;
   padding-bottom: 30px;
@@ -14,4 +16,25 @@ p {
   font-size: 18px;
   line-height: 2;
   color: #222;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.form {
+  background-color: #d6ebf2;
+  margin-right: 10px;
+}
+
+.list {
+  background-color: #e6add8;
 }

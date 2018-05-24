@@ -39,8 +39,8 @@ router.get('/', function(req, res, next) {
 /* POST submit an answer. */
 router.post('/submit', function(req, res) {
   console.log(req["body"]);
-  var company = req["body"].company;
-  var answer = req["body"].answer;
+  var company = req["body"].company.replace(/ /g,'');
+  var answer = req["body"].answer.replace(/ /g,'');
   if (company && company.toLowerCase() in pairings) {
     if (answer && answer.toLowerCase() == pairings[company.toLowerCase()]){
       res.send({company: company.toLowerCase(), answer: answer.toLowerCase()});
