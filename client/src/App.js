@@ -12,34 +12,6 @@ class App extends Component {
       seconds: 6300,
       items: [],
       companies: []
-      // companies: [
-      //   "google",
-      //   "microsoft",
-      //   "pinterest",
-      //   "adobe",
-      //   "snapchat",
-      //   "airbnb",
-      //   "twitter",
-      //   "amazon",
-      //   "apple",
-      //   "facebook",
-      //   "yelp",
-      //   "tesla"
-      // ],
-      // items: [
-      //   {company: "google", answer: "search"},
-      //   {company: "microsoft", answer: "ascii"},
-      //   {company: "pinterest", answer: "nofilter"},
-      //   {company: "adobe", answer: "fishy"},
-      //   {company: "snapchat", answer: "radical"},
-      //   {company: "airbnb", answer: "amaze"},
-      //   {company: "twitter", answer: "newsy"},
-      //   {company: "amazon", answer: "cloud"},
-      //   {company: "apple", answer: "ipadplusprox"},
-      //   {company: "facebook", answer: "soviets"},
-      //   {company: "yelp", answer: "check"},
-      //   {company: "tesla", answer: "outlandish"}
-      // ],
     }
 
     this.attemptAnswerSubmit = this.attemptAnswerSubmit.bind(this);
@@ -117,8 +89,14 @@ class App extends Component {
         }
 
         {this.state.companies.length == 12 &&
-          <div className="content">
-            <VertList items={this.state.items} />
+          <div>
+            <div className="form box margin-below">
+              So you managed to get past all of the other companies' puzzles huh? Fine, here's a code: 24816. I knew I could never trust these other weak companies, but you're messing with Hooli here. I hope you've been paying attention to networking while here at Hooli, you're going to need every answer you get to crack in and get your precious USBs. If you can figure this out, I'll add to you the title of elite, or leet, or 1337 as they say in hip-speak. - Gavin Belson
+
+            </div>
+            <div className="content">
+              <VertList items={this.state.items} />
+            </div>
           </div>
         }
       </div>

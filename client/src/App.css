@@ -38,3 +38,7 @@ p {
 .list {
   background-color: #e6add8;
 }
+
+.margin-below {
+  margin-bottom: 10px;
+}
